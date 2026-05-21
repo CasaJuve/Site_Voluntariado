@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt">
 <head>
-  <meta name="google-site-verification" content="gIfQHJcyxYFuE1dtZtrxuCCNk5c6O2cTzPGUpTS5kP4" />
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="google-site-verification" content="gIfQHJcyxYFuE1dtZtrxuCCNk5c6O2cTzPGUpTS5kP4" />
 <title>Voluntariados · Casa da Juventude de Guimarães</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
@@ -66,6 +66,7 @@
       <h2 class="section-title">Encontra a tua <span>instituição</span></h2>
       <p class="section-desc">Filtra por área de atuação e descobre como podes contribuir para a comunidade.</p>
     </div>
+
     <div class="filters-bar">
       <div class="search-wrap">
         <span class="search-icon">🔍</span>
@@ -79,6 +80,7 @@
       <button class="filter-chip" data-foco="Portadores de deficiência">Deficiência</button>
       <button class="sort-btn" id="sortBtn">⬆ A→Z</button>
     </div>
+
     <div class="results-count" id="resultsCount"></div>
     <div class="cards-grid" id="cardsGrid"></div>
   </div>
@@ -178,3 +180,115 @@
                 <option>Crianças</option>
                 <option>Jovens</option>
                 <option>Animais</option>
+                <option>Portadores de deficiência</option>
+                <option>Ação Social</option>
+              </select>
+            </div>
+            <div class="form-field">
+              <label>LOCALIZAÇÃO</label>
+              <input type="text" id="f_local" placeholder="Rua, número, código postal">
+            </div>
+            <div class="form-field">
+              <label>EMAIL *</label>
+              <input type="email" id="f_email" placeholder="geral@instituicao.pt" required>
+            </div>
+            <div class="form-field">
+              <label>CONTACTO TELEFÓNICO</label>
+              <input type="tel" id="f_tel" placeholder="253 000 000">
+            </div>
+            <div class="form-field">
+              <label>NOME DO RESPONSÁVEL</label>
+              <input type="text" id="f_resp" placeholder="Nome completo">
+            </div>
+            <div class="form-field">
+              <label>HORÁRIO</label>
+              <input type="text" id="f_horario" placeholder="Ex: Segunda a Sexta, manhã">
+            </div>
+            <div class="form-field full">
+              <label>MISSÃO</label>
+              <textarea id="f_missao" placeholder="Descreve a missão e objetivos da instituição..."></textarea>
+            </div>
+            <div class="form-field full">
+              <label>REQUISITOS PARA VOLUNTÁRIOS</label>
+              <textarea id="f_req" placeholder="Descreve o perfil ideal para voluntários na vossa instituição..."></textarea>
+            </div>
+          </div>
+          <button type="button" class="submit-btn" onclick="submitForm()">
+            ✅ Enviar candidatura
+          </button>
+        </form>
+      </div>
+      <div id="successMsg" class="success-msg" style="display:none">
+        <div class="success-emoji">✅</div>
+        <div class="success-title">Candidatura enviada!</div>
+        <p class="success-desc">A tua candidatura foi recebida com sucesso e será analisada em breve pela equipa da Casa da Juventude de Guimarães.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="footer-brand-logo">
+          <div class="footer-brand-icon">🌿</div>
+          <span class="footer-brand-name">Voluntariados</span>
+        </div>
+        <p class="footer-brand-desc">Uma iniciativa da Casa da Juventude de Guimarães para conectar jovens voluntários com instituições locais.</p>
+        <div class="footer-logos">
+          <img src="logo_casajuventude.png" alt="Casa da Juventude de Guimarães" class="footer-logo-img">
+          <img src="logo_municipio.png" alt="Município de Guimarães" class="footer-logo-img footer-logo-municipio">
+        </div>
+      </div>
+      <div class="footer-links-col">
+        <h4>Plataforma</h4>
+        <a href="#instituicoes">Instituições</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#sobre">Sobre o projeto</a>
+        <a href="#inscrever">Inscrever instituição</a>
+        <a href="#" class="footer-app-link">📱 Descarregar App <span class="footer-app-badge">em breve</span></a>
+      </div>
+      <div class="footer-links-col">
+        <h4>Áreas</h4>
+        <a href="#" onclick="setFilter('Idosos')">Idosos</a>
+        <a href="#" onclick="setFilter('Crianças')">Crianças</a>
+        <a href="#" onclick="setFilter('Jovens')">Jovens</a>
+        <a href="#" onclick="setFilter('Animais')">Animais</a>
+        <a href="#" onclick="setFilter('Portadores de deficiência')">Portadores de deficiência</a>
+      </div>
+      <div class="footer-links-col">
+        <h4>Contactos</h4>
+        <a href="mailto:casajuventudeguimaraes@gmail.com">✉️ casajuventudeguimaraes@gmail.com</a>
+        <h4 style="margin-top:20px">Redes Sociais</h4>
+        <a href="https://www.instagram.com/voluntariado.guimaraes?igsh=NXk3a3p1bnFhdGtn" target="_blank">
+          <span class="footer-social-icon">📸</span> @voluntariado.guimaraes
+        </a>
+        <a href="https://www.instagram.com/casadajuventudegmr?igsh=b285d3hidWdodXQ1" target="_blank">
+          <span class="footer-social-icon">📸</span> @casadajuventudegmr
+        </a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span class="footer-copyright">© 2025 Voluntariados · Casa da Juventude de Guimarães</span>
+      <span class="footer-badge">🌿 Feito com impacto social</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MODAL -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModalOnBg(event)">
+  <div class="modal" id="modal">
+    <div class="modal-header" id="modalHeader">
+      <button class="modal-close" onclick="closeModal()">✕</button>
+      <div class="modal-foco" id="modalFoco"></div>
+      <div class="modal-title" id="modalTitle"></div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
