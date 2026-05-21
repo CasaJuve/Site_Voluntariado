@@ -220,3 +220,14 @@ footer{background:var(--dark);padding:48px 24px 32px;margin-top:0}
 .foco-Animais{background:rgba(16,185,129,0.1);color:#059669}
 .foco-Ação-Social{background:rgba(239,68,68,0.1);color:#DC2626}
 .foco-Portadores{background:rgba(99,102,241,0.1);color:#4F46E5}
+/* FOOTER LOGOS */
+.footer-logos{display:flex;align-items:center;gap:16px;margin-top:20px;flex-wrap:wrap}
+.footer-logo-img{height:48px;width:auto;border-radius:8px;background:#fff;padding:6px;object-fit:contain}
+.footer-logo-municipio{filter:invert(1);height:40px}
+
+/* FOOTER APP LINK */
+.footer-app-link{display:inline-flex;align-items:center;gap:6px;margin-top:8px}
+.footer-app-badge{font-size:10px;background:rgba(74,222,128,0.15);color:var(--greenLight);border:1px solid rgba(74,222,128,0.25);padding:2px 7px;border-radius:20px;font-weight:700;letter-spacing:0.5px}
+
+/* FOOTER SOCIAL */
+.footer-social-icon{font-size:15px}
