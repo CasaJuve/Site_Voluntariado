@@ -219,3 +219,10 @@ function submitForm(){
 }
 
 renderCards();
+  const email = document.getElementById('f_email').value.trim();
+  if(!nome||!email){alert('Preenche o nome e o email da instituição.');return;}
+  document.getElementById('formWrap').style.display='none';
+  document.getElementById('successMsg').style.display='block';
+}
+
+renderCards();
